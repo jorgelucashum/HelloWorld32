@@ -17,7 +17,7 @@ namespace HelloWorld32
     {
         static void Main(string[] args)
         {
-            List<Employee> employees = new List<Employee>();
+            List<Employee> employees = new List<Employee>(); // Instanciando lista vazia.
 
             Console.Write("Digite a quantidade de empregados: ");
             int n = int.Parse(Console.ReadLine());
@@ -34,7 +34,8 @@ namespace HelloWorld32
                 Console.Write("Valor por hora: ");
                 double value = double.Parse(Console.ReadLine());
 
-                if (choose == 's')
+                // Estrutura condicional para adicionar um objeto na lista de acordo com a entrada.
+                if (choose == 's') 
                 {
                     Console.Write("Custo adicional: ");
                     double additionalCharge = double.Parse(Console.ReadLine());
@@ -47,7 +48,7 @@ namespace HelloWorld32
             }
 
             Console.WriteLine("\nPagamentos: ");
-            foreach (Employee obj in employees)
+            foreach (Employee obj in employees) // Percorrer toda a lista e imprimir o método que resulta no valor final.
             {
                 Console.WriteLine("R$ " + obj.Payment().ToString("F2"));
             }

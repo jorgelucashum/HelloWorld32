@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorld32.Entities
 {
-    class OutsourcedEmployee : Employee
+    class OutsourcedEmployee : Employee // Herdando caracteristicas da super classe ('Employee').
     {
         public double AdditionalCharge { get; set; }
 
@@ -20,7 +20,7 @@ namespace HelloWorld32.Entities
         }
 
 
-        public override double Payment()
+        public override double Payment() // Método sobreescrito.
         {
             return base.Payment() + (1.10 * AdditionalCharge) ;
         }
